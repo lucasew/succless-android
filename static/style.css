@@ -1,1 +1,81 @@
-/* For now just to commit the folder */
+p {
+    text-align: justify;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+#heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-bottom: 1px gray solid;
+    margin-bottom: 1rem;
+}
+
+#content {
+    width: min(90vw, 500px);
+}
+
+#app-overview {
+    display: flex;
+    align-items: center;
+}
+#app-overview img {
+    max-height: 4rem;
+    padding-right: 1rem;
+}
+
+#app-overview a > * {
+    height: 2rem;
+    width: 2rem;
+}
+#app-overview a {
+    padding: 5px;
+}
+#app-overview a:hover > svg {
+    box-shadow: 0px 0px 1px 5px rgba(0,0,0,1);
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+}
+.app-name > * {
+    margin: 0;
+    padding: 0;
+}
+
+#tag-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.tag-item {
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: .5rem;
+    margin: 3px;
+    cursor: pointer;
+}
+.tag-item:hover {
+    background-color: black;
+    color: white;
+}
+.spacer {
+    flex: 1;
+}
+img {
+    max-width: 100%;
+}
