@@ -10,7 +10,7 @@
             }
         </script>
     {{ range .Pages }}
-    <div class="app-card" data-href="{{ .Permalink }}">
+    <div class="app-card" data-href="{{ .RelPermalink }}">
         <script>
             makeClickable(document.currentScript)
         </script>
