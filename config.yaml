@@ -1,0 +1,13 @@
+languageCode: en-us
+title: Succless Android
+baseURL: http://example.org/
+relativeURLs: true
+taxonomies:
+  tag: tags
+markup:
+  defaultMarkupHandler: goldmark
+  goldmark:
+    renderer:
+      unsafe: true # we will look for unsafe stuff on code review, this is useful for embedding using plain markdown
+    extensions:
+      linkify: true

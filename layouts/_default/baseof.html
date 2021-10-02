@@ -1,0 +1,108 @@
+_<!DOCTYPE html>
+<html lang="{{ .Site.Language }}" dir="{{ .Language.LanguageDirection | default "auto" }}">
+<head>
+    <script src="https://code.iconify.design/2/2.0.4/iconify.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {{- if hugo.IsProduction | or (eq .Site.Params.env "production") }}
+    <meta name="robots" content="index, follow">
+    {{- else }}
+    <meta name="robots" content="noindex, nofollow">
+    {{- end }}
+    {{ with .Page.File }}
+    <meta name="mdpath" content="{{ .Path }}" />
+    {{ end }}
+    <link rel="preload" href="/style.css" as="style">
+    <link rel="stylesheet" href="/style.css">
+    <style>
+#heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#content {
+    width: min(90vw, 500px);
+}
+
+#app-overview {
+    display: flex;
+    align-items: center;
+}
+#app-overview img {
+    max-height: 4rem;
+    padding-right: 1rem;
+}
+
+#app-overview a > * {
+    height: 2rem;
+    width: 2rem;
+}
+#app-overview a {
+    padding: 5px;
+    color: black;
+}
+#app-overview a:hover > svg {
+    box-shadow: 0px 0px 1px 5px rgba(0,0,0,1);
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+}
+.app-name > * {
+    margin: 0;
+    padding: 0;
+}
+
+#tag-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.tag-item {
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: .5rem;
+    margin: 3px;
+    cursor: pointer;
+}
+.tag-item:hover {
+    background-color: black;
+    color: white;
+}
+.spacer {
+    flex: 1;
+}
+img {
+    max-width: 100%;
+}
+</style>
+</head>
+
+<body data-page_id="{{ .Permalink | replaceRE "[^a-zA-Z0-9]" "-" }}" data-file_name="{{ with .File }}{{ .Path }}{{ end }}">
+    <heading id="heading">
+        <h1>
+            <span class="iconify" data-icon="fontisto:android"></span>
+            Succless Android
+        </h1>
+    </heading>
+    <article id="content">
+        {{ block "payload" . }}
+        {{ end }}
+    </article>
+    <script>
+        (function () {
+            const thatElem = document.body.childNodes[0];
+            if (thatElem.data.startsWith('_')) {
+                thatElem.parentElement.removeChild(thatElem)
+            }
+        })()
+    </script>
+</html>
+

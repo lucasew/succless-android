@@ -3,13 +3,18 @@ title: "{{ replace .Name "-" " " | title }}"
 icon: # required: icon of the app, if there is no stable provider you can put the icon alongside the markdown file
 draft: false
 package_id: # required: the package id like com.whatsapp for whatsapp
-playstore: # optional: link to the play store
-fdroid: # optional: link to the fdroid
-xda: # optional: related xda post
-sourcecode: # optional: where the source is stored
+download:
+    apkmirror: # optional: apkmirror link
+    fdroid: # optional: link to the fdroid
+    playstore: # optional: link to the play store
+    sourcecode: # optional: where the source is stored
+    website: # optional: official site
+    xda: # optional: related xda post
+tags:
+    a
+    b
+    c
 ---
-
-# Name of the app
 
 Description of the app
 
