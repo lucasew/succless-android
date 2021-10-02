@@ -1,4 +1,4 @@
-_<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="{{ .Site.Language }}" dir="{{ .Language.LanguageDirection | default "auto" }}">
 <head>
     <script src="https://code.iconify.design/2/2.0.4/iconify.min.js"></script>
@@ -16,17 +16,33 @@ _<!DOCTYPE html>
     <link rel="preload" href="/style.css" as="style">
     <link rel="stylesheet" href="/style.css">
     <style>
-#heading {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+p {
+    text-align: justify;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0;
+    padding: 0;
 }
+
+#heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-bottom: 1px gray solid;
+    margin-bottom: 1rem;
+}
+
 #content {
     width: min(90vw, 500px);
 }
@@ -46,7 +62,6 @@ body {
 }
 #app-overview a {
     padding: 5px;
-    color: black;
 }
 #app-overview a:hover > svg {
     box-shadow: 0px 0px 1px 5px rgba(0,0,0,1);
@@ -82,13 +97,16 @@ body {
 img {
     max-width: 100%;
 }
+
 </style>
 </head>
 
 <body data-page_id="{{ .Permalink | replaceRE "[^a-zA-Z0-9]" "-" }}" data-file_name="{{ with .File }}{{ .Path }}{{ end }}">
     <heading id="heading">
         <h1>
-            <span class="iconify" data-icon="fontisto:android"></span>
+            <a href="/">
+                <span class="iconify" data-icon="fontisto:android"></span>
+            </a>
             Succless Android
         </h1>
     </heading>
@@ -96,13 +114,5 @@ img {
         {{ block "payload" . }}
         {{ end }}
     </article>
-    <script>
-        (function () {
-            const thatElem = document.body.childNodes[0];
-            if (thatElem.data.startsWith('_')) {
-                thatElem.parentElement.removeChild(thatElem)
-            }
-        })()
-    </script>
 </html>
 

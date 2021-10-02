@@ -10,3 +10,8 @@ buggy, only works decently if you pay for the PRO version and so.
 This is a repo of apps that we know and trust that do not do this kind of thing, apps that solve the problem
 and sometimes are incredibly minimal in size and in some cases even working on really old phones and android versions.
 
+If you know an app that is not in the list or want to remove an app that got nasty you can just send an pull request to https://github.com/lucasew/succless-android.
+
+# Links
+
+- [Available apps](/app)

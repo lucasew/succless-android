@@ -1,7 +1,7 @@
 ---
 title: "Mixplorer"
 developer: Hootan Parsa
-icon: icon.png  # required: icon of the app, if there is no stable provider you can put the icon alongside the markdown file
+icon: /app/mixplorer/icon.png
 draft: false
 package_id: com.mixplorer
 download:

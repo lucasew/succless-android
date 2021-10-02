@@ -1,0 +1,64 @@
+{{ define "payload" }}
+        <script>
+            function makeClickable(ref) {
+                const parent = ref.parentNode
+                console.log(ref)
+                parent.addEventListener('click', () => {
+                    window.location.href = parent.dataset.href
+                })
+                parent.style.cursor = 'pointer'
+            }
+        </script>
+    {{ range .Pages }}
+    <div class="app-card" data-href="{{ .Permalink }}">
+        <script>
+            makeClickable(document.currentScript)
+        </script>
+        <div id="app-overview">
+            <img src="{{ .Params.icon }}" />
+            <div class="app-name">
+                <h1>{{ .Title }}</h1>
+                <p>{{ .Params.developer }}</p>
+            </div>
+            <div class="spacer"></div>
+            {{ with .Params.download.apkmirror }}
+                <a href="{{ . }}">
+                    <span class="iconify" data-icon="healthicons:a"></span>
+                </a>
+            {{ end }}
+            {{ with .Params.download.fdroid }}
+                <a href="{{ . }}">
+                    <span class="iconify" data-icon="simple-icons:fdroid"></span>
+                </a>
+            {{ end }}
+            {{ with .Params.download.playstore }}
+                <a href="{{ . }}">
+                    <span class="iconify" data-icon="cib:google-play"></span>
+                </a>
+            {{ end }}
+            {{ with .Params.download.sourcecode }}
+                <a href="{{ . }}">
+                    <span class="iconify" data-icon="bi:code"></span>
+                </a>
+            {{ end }}
+            {{ with .Params.download.website }}
+                <a href="{{ . }}">
+                    <span class="iconify" data-icon="foundation:web"></span>
+                </a>
+            {{ end }}
+            {{ with .Params.download.xda }}
+                <a href="{{ . }}">
+                    <span class="iconify" data-icon="simple-icons:xdadevelopers"></span>
+                </a>
+            {{ end }}
+            {{ with .Params.playstore}}
+            {{ end }}
+        </div>
+        <div id="tag-list">
+            {{ range .Params.tags }}
+            {{ partial "tag.html" . }}
+            {{ end }}
+        </div>
+    </div>
+    {{ end }}
+{{ end }}
