@@ -15,3 +15,4 @@ If you know an app that is not in the list or want to remove an app that got nas
 # Links
 
 - [Available apps](/app)
+- [Look for apps by tag](/tags)
