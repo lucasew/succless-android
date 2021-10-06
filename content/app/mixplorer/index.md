@@ -11,6 +11,10 @@ download:
     xda: https://forum.xda-developers.com/t/app-2-2-mixplorer-v6-x-released-fully-featured-file-manager.1523691/#post-23109280
 tags:
 - file-manager
+- has-dark-theme
+- has-plugin-system
+- reader
+- text-editor
 ---
 
 MiXplorer is a fast, smooth, beautiful, reliable and full-featured Android file manager with a simple and intuitive user interface. This app has no ads, is and will always remain free.
