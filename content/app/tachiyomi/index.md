@@ -9,11 +9,11 @@ download:
     website: https://tachiyomi.org/
     xda: https://forum.xda-developers.com/t/apk-reader-tachiyomi-manga-reader.3941979/
 tags:
-    manga
-    reader
-    downloader
-    has-plugin-system
-    has-dark-theme
+- manga
+- reader
+- downloader
+- has-plugin-system
+- has-dark-theme
 ---
 
 Free and open source manga reader for Android
