@@ -69,13 +69,23 @@ body {
     margin: 3px;
     cursor: pointer;
 }
-.tag-item:hover {
-    background-color: black;
+
+.tag-item > a {
+    font-weight: normal;
+}
+
+.tag-item > a:hover {
     color: white;
 }
+
+.tag-item:hover {
+    background-color: black;
+}
+
 .spacer {
     flex: 1;
 }
+
 img {
     max-width: 100%;
 }
