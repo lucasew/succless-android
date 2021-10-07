@@ -25,6 +25,8 @@ It's more useful to provide meaningful tags, these are the default tag system th
 - `downloader`: if it downloads the content to be used inside the application
 - `file-manager`: if the main usage is to manage files
 - `has-dark-theme`: if the app have some mechanism to change theme to a dark variant
+- `has-image-editor`: if the app have some image editing capatibility like crop images
+- `has-network-file-transfer`: if the app provides a mechanism to discover other nodes on the same local network to transfer files
 - `has-plugin-system`: if the app supports some kind of plugin system, probably using external APK files that the app discovers at runtime
 - `reader`: if it reads some kind of document
 - `text-editor`: if it has some mechanism for editing plain text files or code
