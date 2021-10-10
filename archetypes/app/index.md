@@ -11,9 +11,9 @@ download:
     website: # optional: official site
     xda: # optional: related xda post
 tags:
-    a
-    b
-    c
+- a
+- b
+- c
 ---
 
 Description of the app
